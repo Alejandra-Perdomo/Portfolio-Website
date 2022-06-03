@@ -6,7 +6,8 @@ function Header() {
     <div className='header-container'>
         <div className="profile-pic"></div>
         <div className="profile-name">Alejandra Perdomo</div>
-        <div className="welcome">Bienvenido a mi Portafolio</div>
+        <div className="welcome">Bienvenid@ a mi Portafolio</div>
+        <div className='banner-shaded-bottom'></div>
     </div>
   )
 }

@@ -1,0 +1,59 @@
+
+
+.project-header{
+    min-height: 340px;
+    width: 100%;
+    margin-bottom: 30px;
+    background-size: contain;
+}
+
+.go-back-btn,.cloud-link{
+    text-decoration: none;
+    background-color: white;
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid rgb(165, 165, 209);
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    font-size: 15px;
+    color:rgb(165, 165, 209);
+    margin-right: 10px;
+}
+
+.go-back-btn:hover,.cloud-link:hover{
+    background-color: rgba(0,0,0,0.5);
+    transition: .20s ease-in-out;
+    border: 2px solid transparent;
+    color: white;
+}
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content{
+    width: 60%;
+}
+
+.title{
+    color: rgb(112, 108, 108);
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    border-top: 1px solid rgb(194, 186, 186)  ;
+    border-bottom: 1px solid rgb(194, 186, 186) ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.text{
+    color: rgb(119, 116, 116);;
+    font-size: 18px;
+    margin-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 30px;
+}
