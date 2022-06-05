@@ -3,12 +3,12 @@ import './App.css';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import HomePage from './Pages/HomePage';
 import ProjectPage from './Pages/ProjectPage';
-import Data from'./Data';
+import {Data} from'./Data';
 import { useState } from 'react';
 
 function App() {
 
-  const [data,setData]=useState(Data);
+  const [data]=useState(Data);
 
   return (
     <BrowserRouter>

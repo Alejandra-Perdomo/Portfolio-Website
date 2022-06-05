@@ -12,7 +12,7 @@ import image6 from '../Styles/images/locator.png'
 import image7 from '../Styles/images/weatherapp.png'
 import image8 from '../Styles/images/instagram.png'
 
-function ProjectPreview({data}) {
+function ProjectPreview({data, mobile, tablet}) {
 
   const [audio] = useState(new Audio(sound));
 
@@ -29,11 +29,15 @@ function ProjectPreview({data}) {
     <div>
       {data.map((info,index)=>
       <Link to={info.link} className='link' key={index} onClick={()=>playSound()}>
-        <div className="project-prev-container" key={index}>
-          <img src={getImage(index)} className="project-prev-img"/>
-          <div className="project-prev-content">
-              <div className="project-prev-title">{info.title}</div>
-              <div className="project-prev-text">{info.content}</div>
+        <div className={mobile?"project-prev-container-mobile":tablet?
+        "project-prev-container-tablet":"project-prev-container"} key={index}>
+          <img src={getImage(index)} className={mobile?"project-prev-img-mobile":"project-prev-img"}/>
+          <div className={mobile?"project-prev-content-mobile":"project-prev-content"}>
+              <div className={mobile?"project-prev-title-mobile":
+              tablet?"project-prev-title":"project-prev-title"}>{info.title}</div>
+              <div className={mobile?"project-prev-text-mobile":tablet?
+              "project-prev-text-tablet":"project-prev-text"}>
+                {info.content.length>200? info.content.substring(0,200)+'...' : info.content}</div>
           </div>
         </div> 
       </Link>

@@ -1,26 +1,45 @@
-import React, { useState} from 'react'
+import React, { useState, useEffect} from 'react'
 import Header from '../Components/Header'
 import ProjectPreview from '../Components/ProjectPreview'
-import Data from '../Data'
+import { Data, Messages } from '../Data';
 import '../Styles/HomePage.css';
 import helloWorldGif from '../Styles/images/helloWorld.gif'
 
 function HomePage() {
 
   const [data]=useState(Data);
+  const [mobile, setMobile] = useState(false);
+  const [tablet, setTablet] = useState(false);
+
+  const getDeviceSize = () =>{
+    if(window.innerWidth <= 600){
+      setMobile(true);
+      setTablet(false);
+    }else if(window.innerWidth>600 && window.innerWidth<=900){
+      setMobile(false);
+      setTablet(true);
+    }else{
+      setMobile(false);
+      setTablet(false)
+    }
+  }
+
+  window.addEventListener('resize', getDeviceSize);
+
+  useEffect(()=>{
+    getDeviceSize();
+  },[])
 
   return (
     <div>
-      <Header/>
+      <Header mobile={mobile}/>
       <div className='msg-container'>
-          <div className='welcome-msg'>
-            <div>¡Hola! Gracias por visitar mi portafolio. Soy estudiante de sistemas
-            y programadora autodidacta. He reunido aquí todos los proyectos en los que he trabajado hasta ahora.
-            Echa un vistazo... Feliz código 🙂 </div>
-            <img className='gif' src={helloWorldGif}/> 
+          <div className={mobile?'welcome-msg-mobile':tablet?'welcome-msg-tablet':'welcome-msg'}>
+            <div>{Messages.welcomeMsg}</div>
+            <img className={mobile? 'gif-mobile':'gif'} src={helloWorldGif}/> 
           </div>
       </div>
-      <ProjectPreview data={data}/>
+      <ProjectPreview data={data} mobile={mobile} tablet={tablet}/>
       <footer><div>Made with ♡ by Alejandra</div></footer>
     </div>
   )

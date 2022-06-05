@@ -1,4 +1,4 @@
-const items = [
+ export const Data = [
     {
        title: "Blackjack 21",
        content: "Este juego de cartas es similar al Blackjack 21. Para sacar tus cartas presiona “Hit” y cuando termines tu turno presiona “Stand”. Al presionar “Stand” el bot jugará su turno automáticamente y ganará quien tenga un puntaje más próximo a 21 puntos, pero sin excederse. El juego fue programado con JavaScript y Html. Si quieres jugar de nuevo presiona “Deal” y la tabla llevará el registro de tu puntaje. ",
@@ -7,7 +7,7 @@ const items = [
     },
     {
         title: "Caja de Música",
-        content: "Esta caja de música está hecha con JavaScript y Html. Según la tecla que presiones se produce un sonido diferente. Como un piano!",
+        content: "Esta caja de música está hecha con JavaScript y Html. Presiona en tu teclado letras que coincidan con las de la caja y se producirá un sonido distinto según la tecla. ¡Como un piano!",
         link:'/project/Beatbox',
         cloudLink:'https://inquisitive-phoenix-2857a0.netlify.app',
      },
@@ -19,24 +19,24 @@ const items = [
      },
      {
       title: "TO-DO APP",
-      content: "Esta app es una secilla lista de pendientes. Puedes agregar un pendiente, marcarlo como relizado o removerlo. La app está prograda con React JS y utiliza una base de datos en tiempo real de Firebase.",
+      content: "Esta app es una sencilla lista de pendientes. Puedes agregar un pendiente, marcarlo como realizado o removerlo. La app está programada con React JS y utiliza una base de datos en tiempo real de Firebase.",
       link:'/project/ToDoApp',
       cloudLink:'https://to-do-app-a227c.web.app',
      },
      {
       title: "Clon de Twitter",
-      content: "La interfaz de este buscador de hashtags es muy parecida a Twitter. En la barra de búsqueda puedes ingresar un hashtag y el resultado serán los tweets más recientes con ese hashtag. Utiliza Node, Express y Axios para acceder a la base de datos de Twitter con una llave provista por Twitter.",
+      content: "La interfaz de este buscador de hashtags es muy parecida a la de Twitter. En la barra de búsqueda puedes ingresar un hashtag y el resultado serán los tweets más recientes con ese hashtag. Utiliza Node, Express y Axios para acceder a la base de datos de Twitter con una llave provista por Twitter.",
       link:'/project/TwitterClone',
      },
      {
       title: "Carrito de Amazon",
-      content: "Este proyecto es un réplica de un carrito de compras de Amazon. Está programado con React JS, lo que le permite hacer un cálculo automático del costo total sin tener que refrescar la página cada vez que se cambia la cantidad de ítems en el carrito. ",
+      content: "Este proyecto es una réplica de un carrito de compras de Amazon. Está programado con React JS, lo que le permite hacer un cálculo automático del costo total sin tener que refrescar la página cada vez que se cambia la cantidad de ítems en el carrito. ",
       link:'/project/AmazonCart',
       cloudLink:'https://pensive-ptolemy-06cf31.netlify.app',
      },
      {
       title: "Localizador de Expresso Americano",
-      content: "Este localizador de Expresso Américano fue hecho con herramientas provistas por google maps. Utiliza una base de datos no relacional (MongoDB) que construí yo misma recopilando las coordenadas geográficas de cada Expresso. Por el momento solo tiene los datos de San Pedro Sula, Tegucigalpa, Santa Rosa de Copán, Choluteca y la Ceiba. ",
+      content: "Este localizador de Expresso Américano fue hecho con herramientas provistas por google maps. Utiliza una base de datos no relacional (MongoDB) que construí yo misma recopilando las coordenadas geográficas de cada Expresso. Por el momento solo cuenta con los datos de San Pedro Sula, Tegucigalpa, Santa Rosa de Copán, Choluteca y la Ceiba. ",
       link:'/project/StoreLocator',
      },
      {
@@ -46,10 +46,14 @@ const items = [
      },
      {
       title: "Clon de Instagram",
-      content: 'Esta app móvil fue desarrollada con React Native, Formik, Yup, Expo y Firebase. La app permite crear una cuenta, iniciar sesión, ver la pantalla principal y hacer una publicación (con una imagen y un comentario) a la cual otros usuarios pueden dar “me gusta”. Utilizo Formik y Yup para hacer formularios y Firebase para la autenticación y el manejo de datos.',
+      content: 'Esta app móvil fue desarrollada con React Native, Formik, Yup, Expo y Firebase. La app permite crear una cuenta, iniciar sesión, ver la pantalla principal y hacer una publicación (con una imagen y un comentario) a la cual otros usuarios pueden dar “me gusta”. Utilicé Formik y Yup para hacer los formularios y Firebase para la autenticación de usuarios y el manejo de datos.',
       link:'/project/InstagramClone',
      },
      
 ]
 
-export default items;
+export const Messages ={
+   welcomeMsg:'¡Hola! Gracias por visitar mi portafolio. Soy estudiante de sistemas y programadora autodidacta. He reunido aquí todos los proyectos en los que he trabajado hasta ahora. Echa un vistazo... Feliz código 🙂.',
+   projectView: '*Para ver proyecto abre el sitio web en una pantalla más amplia.'
+}
+

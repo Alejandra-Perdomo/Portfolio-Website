@@ -7,6 +7,13 @@
     background-size: contain;
 }
 
+.project-header-mobile{
+    height: 200px;
+    width: 100%;
+    margin-bottom: 30px;
+    background-size: contain;
+}
+
 .go-back-btn,.cloud-link{
     text-decoration: none;
     background-color: white;
@@ -37,6 +44,10 @@
     width: 60%;
 }
 
+.content-mobile,.content-tablet{
+    width: 90%;
+}
+
 .title{
     color: rgb(112, 108, 108);
     font-size: 28px;
@@ -49,9 +60,30 @@
     margin-top: 30px;
 }
 
+.title-mobile,.title-tablet{
+    color: rgb(112, 108, 108);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-top: 1px solid rgb(194, 186, 186)  ;
+    border-bottom: 1px solid rgb(194, 186, 186) ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
 .text{
     color: rgb(119, 116, 116);;
     font-size: 18px;
+    margin-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 30px;
+}
+
+.text-mobile,.text-tablet{
+    color: rgb(119, 116, 116);;
+    font-size: 16px;
     margin-top: 15px;
     padding-left: 10px;
     padding-right: 10px;
